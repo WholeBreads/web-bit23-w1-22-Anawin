@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiplication Table</title>
+    <title>While Loop</title>
     <style>
         :root {
             color-scheme: light;
@@ -102,10 +102,10 @@
 <body>
     <div class="container">
     <?php
-        echo "<h1>W1 - Anawin Sakulcharoenchoke BIT.2/3 No.22</h1>";
+        echo "<h1>W1 - While Loop - Anawin Sakulcharoenchoke BIT.2/3 No.22</h1>";
     ?>
 
-    <a href="while.php">While Loop</a>
+    <a href="index.php">Back to Index</a> <br><br>
 
     <form action="">
         <label for="">เลขแม่สูตรคูณ</label> <br> 
@@ -117,11 +117,12 @@
         if(isset($_GET["num"])){
             $num = $_GET["num"];
 
-            echo "<div class=\"result\"><h2>สูตรคูณแม่ " . $num . "</h2>";
+            echo "<div class=\"result\"><h2>สูตรคูณแม่ " . $num . " (While Loop)</h2>";
 
-            //. เริ่มต้น     สิ้นสุด    เพิ่มทีละ
-            for($i = 1; $i <= 12; $i++){
+            $i = 1;
+            while($i <= 12){
                 echo $num . " x " . $i . " = " . ($num * $i) . "<br>";
+                $i++;
             }
 
             echo "</div>";
